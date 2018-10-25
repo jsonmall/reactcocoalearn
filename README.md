@@ -2,7 +2,7 @@
 
 `ReactiveCocoa` 在GitHub有1.5万多个星，不少大型公司的的都用它作为主流框架，比如美团，但它同时又是一个非常复杂的框架，在正式开始介绍它的核心组件前，我们先来看看它的类图，以便从宏观上了解它的层次结构：
 
-![介绍](one.jpg)
+![介绍](https://github.com/jsonmall/reactcocoalearn/blob/master/md/one.jpg)
 
 从上面的类图中，我们可以看出，ReactiveCocoa 主要由以下四大核心组件构成：
 
@@ -89,7 +89,7 @@
 
 订阅者对信号源的一次订阅过程可以抽象为：通过 `RACSignal` 的 -`subscribe`: 方法传入一个订阅者，并最终返回一个 RACDisposable 对象的过程：
 
-![subcir](subscribe.png)
+![subcir](https://github.com/jsonmall/reactcocoalearn/blob/master/md/subscribe.png)
 
 ###RACScheduler(调度器)
 
@@ -104,7 +104,7 @@
 
 `RACDisposable` 在 `ReactiveCocoa` 中就充当着清洁工的角色，它封装了取消和清理一次订阅所必需的工作。它有一个核心的方法 -`dispose` ，调用这个方法就会执行相应的清理工作，这有点类似于 `NSObject` 的 `-dealloc` 方法。`RACDisposable` 总共有四个子类，它的继承结构图如下
 
-![RACDisposable](RACDisposable.jpg)
+![RACDisposable](https://github.com/jsonmall/reactcocoalearn/blob/master/md/RACDisposable.jpg)
 
 * `RACSerialDisposable` ：作为 `disposable` 的容器使用，可以包含一个 `disposable` 对象，并且允许将这个 `disposable` 对象通过原子操作交换出来；
 * `RACKVOTrampoline` ：代表一次 KVO 观察，并且可以用来停止观察；
