@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  TestRAC
+//
+//  Created by 郭大侠 on 2018/10/25.
+//  Copyright © 2018年 AiTeng. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "ReactiveObjC.h"
+
+#define GPWeakSelf(type)  __weak typeof(type) weak##type = type;
+
+#define GPStrongSelf(type)  __strong typeof(type) type = weak##type;
+
+#endif /* PrefixHeader_pch */
